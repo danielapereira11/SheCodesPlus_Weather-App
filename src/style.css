@@ -1,0 +1,153 @@
+body {
+  background-image: url("C:/Users/Daniela/Documents/Programing/She Codes/Plus/Week 2/Homework/v3/Images/background_kite.svg");
+}
+.container {
+  margin: 20px auto;
+  border: 5px solid #ffeedbe8;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #ffeedbf3;
+  color: #003638;
+  font-family: "Crimson Pro", serif;
+}
+.main-row {
+  margin-left: 0;
+  margin-right: 0;
+}
+h1 {
+  font-size: 17px;
+  font-weight: 100;
+  line-height: 18px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 20px;
+}
+h3,
+footer,
+.greating,
+.next-temp {
+  text-align: center;
+}
+.greating {
+  border: 1.5px solid #055052;
+  border-radius: 4px;
+  background-color: #055052;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+.image-row {
+  padding: 6px;
+}
+#current-city {
+  margin: 20px 0 5px 0;
+}
+.weather-row {
+  margin-top: 10px;
+}
+.today-current-date-time {
+  font-size: 16px;
+}
+.today-current-weather {
+  font-size: 21px;
+}
+#today-current-temp {
+  font-size: 65px;
+}
+.temp-unit {
+  font-size: 19px;
+}
+#celcius-link,
+#celcius-link:visited,
+#celcius-link:focus,
+#celcius-link:active {
+  color: #003638;
+  text-decoration: none;
+}
+#fahrenheit-link,
+#fahrenheit-link:visited,
+#fahrenheit-link:focus,
+#fahrenheit-link:active {
+  color: #012d3093;
+  text-decoration: none;
+}
+.today-min-max-temp {
+  padding: 13px 0 0 0;
+}
+.fa-long-arrow-alt-up {
+  color: rgb(145, 0, 0);
+}
+.fa-long-arrow-alt-down {
+  color: rgb(0, 0, 119);
+}
+.fa-search,
+.fa-map-marker-alt,
+.contact-button,
+.greating {
+  color: #ffeedbe8;
+}
+.search-button,
+.input-group-text {
+  border: 1.5px solid #055052;
+  background-color: #055052;
+}
+.fa-cloud,
+.fa-sun,
+.fa-cloud-sun-rain {
+  color: #055052;
+}
+.next-temp {
+  margin: 5px 20px 10px 20px;
+}
+p.card-title {
+  font-size: 15px;
+}
+p.card-text {
+  line-height: 16px;
+}
+.contact-button {
+  display: block;
+  margin: 20px auto 0 auto;
+  padding: 5px 10px;
+  border: 1.5px solid #055052;
+  border-radius: 4px;
+  background-color: #055052;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 991.98px) {
+  .container {
+    max-width: 800px;
+  }
+}
+@media (max-width: 991.98px) {
+  #today-current-temp {
+    font-size: 55px;
+  }
+  .temp-unit {
+    font-size: 17px;
+  }
+  .today-current-weather {
+    font-size: 19px;
+  }
+  .today-min-max-temp {
+    font-size: 17px;
+  }
+}
+@media (max-width: 767.98px) {
+  .imagem-column {
+    display: none;
+  }
+  #today-current-temp {
+    font-size: 50px;
+  }
+  .temp-unit {
+    font-size: 16px;
+  }
+  .today-current-weather {
+    font-size: 18px;
+  }
+  .today-min-max-temp {
+    font-size: 17px;
+  }
+}

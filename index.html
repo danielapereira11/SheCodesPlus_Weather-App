@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/3034dccdbc.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>W4 Homework</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- FIRST ROW WITH THE INFO -->
+      <div class="row align-items-center main-row">
+        <!-- COLUMN 1 -->
+        <div class="col">
+          <!-- Col 1 ROW 1 -->
+          <div class="row greating-row">
+            <div class="col greating">
+              <h1>
+                <span id="greeting">Hello! 🖐</span><br /><span id="tip"
+                  >Have a great day! 👌</span
+                >
+              </h1>
+            </div>
+          </div>
+
+          <!-- Col 1 ROW 2 -->
+          <div class="row">
+            <div class="col-12">
+              <h2 id="current-city"></h2>
+            </div>
+          </div>
+          <!-- Col 1 ROW 3 -->
+          <div class="row weather-row">
+            <div class="col-5">
+              <div class="today-current-date-time">
+                <p>
+                  <span id="current-date">Wed, August 4</span><br /><span
+                    id="current-time"
+                    >14:23</span
+                  >
+                </p>
+              </div>
+              <div class="today-current-weather">
+                <p>
+                  <span id="current-weather"></span
+                  ><span><img src="" id="weather-icon" /></span>
+                </p>
+              </div>
+            </div>
+            <div class="col today">
+              <span id="today-current-temp">
+                <span id="current-temp-value"></span>
+                <a
+                  href="#"
+                  id="celcius-link"
+                  title="See the temperature in Celcius"
+                  ><span class="temp-unit align-text-top">ºC</span></a
+                >
+                <span class="temp-unit align-text-top">&nbsp;|</span>
+                <a
+                  href="#"
+                  id="fahrenheit-link"
+                  title="See the temperature in Fahrenheit"
+                  ><span class="ºF temp-unit align-text-top">ºF</span></a
+                >
+              </span>
+            </div>
+            <div class="col today today-min-max-temp">
+              <p class="today-max-temp">
+                <i class="fas fa-long-arrow-alt-up"></i>
+                <span id="max-temp"></span>ºC
+              </p>
+              <p class="today-min-temp">
+                <i class="fas fa-long-arrow-alt-down"></i>
+                <span id="min-temp"></span>ºC
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- END COLUMN 1 -->
+        <!-- COLUMN 2 -->
+        <div class="col-2 imagem-column">
+          <div class="row image-row">
+            <img
+              src="Images/undraw_raining.svg"
+              alt="raining umbrella"
+              class="img-fluid"
+            />
+          </div>
+          <div class="row image-row">
+            <img
+              src="Images/undraw_fall.svg"
+              alt="girl playing with leaves"
+              class="img-fluid"
+            />
+          </div>
+          <div class="row image-row">
+            <img
+              src="Images/manypixels_snow.svg"
+              alt="snowman in the sun"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+        <!-- END COLUMN 2 -->
+      </div>
+
+      <!-- SEARCH FOR ANOTHER CITY -->
+
+      <form class="input-group" id="search-form">
+        <button
+          type="button"
+          class="input-group-text"
+          id="current-location-button"
+        >
+          <i class="fas fa-map-marker-alt"></i>
+        </button>
+        <input
+          type="search"
+          class="form-control"
+          id="city-search"
+          placeholder=" Search another city ..."
+          aria-label="Search input with submit button"
+          autocomplete="off"
+          ;
+        />
+        <button type="submit" class="btn search-button" id="search-button">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+
+      <!-- WEATHER FOR THE NEXT COUPLE OF DAYS -->
+      <hr />
+      <h3>How will the weather be for the next couple of days?</h3>
+      <div
+        class="
+          row row-cols-1 row-cols-md-5
+          g-3
+          align-items-center
+          justify-content-evenly
+          next-temp
+        "
+      >
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-title">THURSDAY</p>
+              <p class="card-text"><i class="fas fa-cloud"></i></p>
+              <p class="card-text">20ºC</p>
+              <p class="card-text">12ºC</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-title">FRIDAY</p>
+              <p class="card-text"><i class="fas fa-sun"></i></p>
+              <p class="card-text">24ºC</p>
+              <p class="card-text">14ºC</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-title">SATURDAY</p>
+              <p class="card-text"><i class="fas fa-sun"></i></p>
+              <p class="card-text">25ºC</p>
+              <p class="card-text">12ºC</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-title">SUNDAY</p>
+              <p class="card-text"><i class="fas fa-cloud-sun-rain"></i></p>
+              <p class="card-text">22ºC</p>
+              <p class="card-text">10ºC</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-title">MONDAY</p>
+              <p class="card-text"><i class="fas fa-sun"></i></p>
+              <p class="card-text">24ºC</p>
+              <p class="card-text">13ºC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <!-- FOOTER -->
+      <footer>
+        <p>Coded by Daniela Pereira</p>
+        <button class="contact-button">Contact me</button>
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
