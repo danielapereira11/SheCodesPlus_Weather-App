@@ -61,13 +61,15 @@ function showWeather(response) {
   let minTemp = Math.round(response.data.main.temp_min);
   let minTempValue = document.querySelector("#min-temp");
   minTempValue.innerHTML = minTemp;
-  let currentWeather = response.data.weather[0].main;
+  let currentWeather = response.data.weather[0].description;
   let currentWeatherDescript = document.querySelector("#current-weather");
   currentWeatherDescript.innerHTML = currentWeather;
   let weatherIconCode = response.data.weather[0].icon;
   let weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIconCode}.png`;
   let weatherIcon = document.querySelector("#weather-icon");
   weatherIcon.src = weatherIconUrl;
+  weatherIcon.alt = currentWeather;
+  console.log(response);
 }
 
 // WEATHER API: SEARCHED CITY (TEMP + LOCATION)
