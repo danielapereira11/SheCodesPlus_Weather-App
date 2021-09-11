@@ -69,7 +69,6 @@ function showWeather(response) {
   let weatherIcon = document.querySelector("#weather-icon");
   weatherIcon.src = weatherIconUrl;
   weatherIcon.alt = currentWeather;
-  console.log(response);
 }
 
 // WEATHER API: SEARCHED CITY (TEMP + LOCATION)
