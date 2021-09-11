@@ -1,6 +1,6 @@
 CHANGES TO MAKE:
 JAVASCRIPT
-// SEE HOW I CAN CHANGE THE GREETING AND THE TIP LATER ON!!! ALSO THE ºC AND ºF
+// SEE HOW I CAN CHANGE THE GREETING AND THE TIP LATER ON!!! 
 
 // EDIT THE Cº AND Fº SO THAT WHEN WE CLICK ON THEM, OTHER THAN CONVERTING, THEY ALSO CHANGE POSITION AND COLOR, SO THAT THE ONE THAT IS REPRESENTED IS THE CLOSEST TO THE ACTUAL TEMP BEING DISPLAYED
 
@@ -45,20 +45,3 @@ _____
 // }
 
 ______
-
-// 🙀Bonus Feature from week 4 - CONVERT Cº DO Fº
-
-// function convertToCelcius(event) {
-//   let celciusTemperature = document.querySelector("#current-temp-value");
-//   celciusTemperature.innerHTML = "22";
-// }
-
-// function convertToFahrenheit(event) {
-//   let fahrenheitTemperature = document.querySelector("#current-temp-value");
-//   fahrenheitTemperature.innerHTML = "65";
-// }
-
-// let celciusLink = document.querySelector("#celcius-link");
-// celciusLink.addEventListener("click", convertToCelcius);
-// let fahrenheitLink = document.querySelector("#fahrenheit-link");
-// fahrenheitLink.addEventListener("click", convertToFahrenheit);

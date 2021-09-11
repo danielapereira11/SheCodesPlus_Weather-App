@@ -47,12 +47,9 @@ getCurrentTime();
 // WEATHER
 
 function showWeather(response) {
-  // let currentTemp = Math.round(response.data.main.temp);
-  // let currentTempValue = document.querySelector("#current-temp-value");
-  // currentTempValue.innerHTML = currentTemp;
-  document.querySelector("#current-temp-value").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  currentTemp = Math.round(response.data.main.temp);
+  let currentTempValue = document.querySelector("#current-temp-value");
+  currentTempValue.innerHTML = currentTemp;
   let currentCity = document.querySelector("#current-city");
   currentCity.innerHTML = `${response.data.name}`;
   let maxTemp = Math.round(response.data.main.temp_max);
@@ -85,9 +82,6 @@ function searchAnotherCity(event) {
   search(city);
 }
 
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", searchAnotherCity);
-
 // WEATHER API: CURRENT LOCATION (TEMP + LOCATION)
 
 function showCurrentLocation(position) {
@@ -102,7 +96,30 @@ function getCurrentLocation() {
   navigator.geolocation.getCurrentPosition(showCurrentLocation);
 }
 
+
+function convertToCelcius(event) {
+  event.preventDefault();
+  let celciusTemperature = document.querySelector("#current-temp-value");
+  celciusTemperature.innerHTML = currentTemp;
+}
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = document.querySelector("#current-temp-value");
+  fahrenheitTemperature.innerHTML = Math.round(currentTemp * 1.8 + 32);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", searchAnotherCity);
+
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let currentTemp = null;
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", convertToCelcius);
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 search("Guimarães");
