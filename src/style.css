@@ -61,19 +61,20 @@ footer,
 .temp-unit {
   font-size: 19px;
 }
-#celcius-link,
-#celcius-link:visited,
-#celcius-link:focus,
-#celcius-link:active {
-  color: #003638;
+.unit-link {
   text-decoration: none;
 }
-#fahrenheit-link,
-#fahrenheit-link:visited,
-#fahrenheit-link:focus,
-#fahrenheit-link:active {
+.active,
+.active:visited,
+.active:focus,
+.active:active {
+  color: #003638;
+}
+.not-active,
+.not-active:visited,
+.not-active:focus,
+.not-active:active {
   color: #012d3093;
-  text-decoration: none;
 }
 .today-min-max-temp {
   padding: 13px 0 0 0;

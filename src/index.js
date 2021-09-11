@@ -96,6 +96,10 @@ function getCurrentLocation() {
 
 function convertToCelcius(event) {
   event.preventDefault();
+  celciusLink.classList.add("active");
+  celciusLink.classList.remove("not-active");
+  fahrenheitLink.classList.add("not-active");
+  fahrenheitLink.classList.remove("active");
   currentTempValue.innerHTML = currentTemp;
   maxTempValue.innerHTML = `${maxTemp}ºC`;
   minTempValue.innerHTML = `${minTemp}ºC`;
@@ -103,6 +107,10 @@ function convertToCelcius(event) {
 
 function convertToFahrenheit(event) {
   event.preventDefault();
+  celciusLink.classList.add("not-active");
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  fahrenheitLink.classList.remove("not-active");
   currentTempValue.innerHTML = Math.round(currentTemp * 1.8 + 32);
   maxTempValue.innerHTML = `${Math.round(maxTemp * 1.8 + 32)}ºF`;
   minTempValue.innerHTML = `${Math.round(minTemp * 1.8 + 32)}ºF`;
