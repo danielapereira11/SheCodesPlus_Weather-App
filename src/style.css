@@ -27,11 +27,11 @@ h3 {
 }
 h3,
 footer,
-.greating,
+.greeting,
 .next-temp {
   text-align: center;
 }
-.greating {
+.greeting {
   border: 1.5px solid #055052;
   border-radius: 4px;
   background-color: #055052;
@@ -84,7 +84,7 @@ footer,
 .fa-search,
 .fa-map-marker-alt,
 .contact-button,
-.greating {
+.greeting {
   color: #ffeedbe8;
 }
 .search-button,
@@ -94,7 +94,8 @@ footer,
 }
 .fa-cloud,
 .fa-sun,
-.fa-cloud-sun-rain {
+.fa-cloud-sun-rain, 
+#code-link {
   color: #055052;
 }
 .next-temp {
@@ -105,9 +106,6 @@ p.card-title {
 }
 p.card-text {
   line-height: 16px;
-}
-#code-link {
-  color: #055052;
 }
 .contact-button {
   display: block;
@@ -127,14 +125,12 @@ p.card-text {
   #today-current-temp {
     font-size: 55px;
   }
-  .temp-unit {
+  .temp-unit,
+  .today-min-max-temp {
     font-size: 17px;
   }
   .today-current-weather {
     font-size: 19px;
-  }
-  .today-min-max-temp {
-    font-size: 17px;
   }
 }
 @media (max-width: 767.98px) {
