@@ -47,17 +47,14 @@ getCurrentTime();
 // WEATHER
 
 function showWeather(response) {
-  currentTemp = Math.round(response.data.main.temp);
-  let currentTempValue = document.querySelector("#current-temp-value");
-  currentTempValue.innerHTML = currentTemp;
   let currentCity = document.querySelector("#current-city");
   currentCity.innerHTML = `${response.data.name}`;
-  let maxTemp = Math.round(response.data.main.temp_max);
-  let maxTempValue = document.querySelector("#max-temp");
-  maxTempValue.innerHTML = maxTemp;
-  let minTemp = Math.round(response.data.main.temp_min);
-  let minTempValue = document.querySelector("#min-temp");
-  minTempValue.innerHTML = minTemp;
+  currentTemp = Math.round(response.data.main.temp);
+  currentTempValue.innerHTML = currentTemp;
+  maxTemp = Math.round(response.data.main.temp_max);
+  maxTempValue.innerHTML = `${maxTemp}ºC`;
+  minTemp = Math.round(response.data.main.temp_min);
+  minTempValue.innerHTML = `${minTemp}ºC`;
   let currentWeather = response.data.weather[0].description;
   let currentWeatherDescript = document.querySelector("#current-weather");
   currentWeatherDescript.innerHTML = currentWeather;
@@ -99,24 +96,29 @@ function getCurrentLocation() {
 
 function convertToCelcius(event) {
   event.preventDefault();
-  let celciusTemperature = document.querySelector("#current-temp-value");
-  celciusTemperature.innerHTML = currentTemp;
+  currentTempValue.innerHTML = currentTemp;
+  maxTempValue.innerHTML = `${maxTemp}ºC`;
+  minTempValue.innerHTML = `${minTemp}ºC`;
 }
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let fahrenheitTemperature = document.querySelector("#current-temp-value");
-  fahrenheitTemperature.innerHTML = Math.round(currentTemp * 1.8 + 32);
+  currentTempValue.innerHTML = Math.round(currentTemp * 1.8 + 32);
+  maxTempValue.innerHTML = `${Math.round(maxTemp * 1.8 + 32)}ºF`;
+  minTempValue.innerHTML = `${Math.round(minTemp * 1.8 + 32)}ºF`;
 }
+
+let currentTemp = null;
+let currentTempValue = document.querySelector("#current-temp-value");
+let maxTemp = null;
+let maxTempValue = document.querySelector("#max-temp");
+let minTemp = null;
+let minTempValue = document.querySelector("#min-temp");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchAnotherCity);
-
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-
-let currentTemp = null;
-
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", convertToCelcius);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
