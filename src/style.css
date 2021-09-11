@@ -52,6 +52,9 @@ footer,
 .today-current-weather {
   font-size: 21px;
 }
+.today-current-weather::first-letter {
+  text-transform: capitalize;
+}
 #today-current-temp {
   font-size: 65px;
 }
