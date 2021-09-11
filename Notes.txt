@@ -1,0 +1,60 @@
+CHANGES TO MAKE:
+JAVASCRIPT
+// SEE HOW I CAN CHANGE THE GREETING AND THE TIP LATER ON!!! ALSO THE ºC AND ºF
+
+// EDIT THE Cº AND Fº SO THAT WHEN WE CLICK ON THEM, OTHER THAN CONVERTING, THEY ALSO CHANGE POSITION AND COLOR, SO THAT THE ONE THAT IS REPRESENTED IS THE CLOSEST TO THE ACTUAL TEMP BEING DISPLAYED
+
+// ADD THE API FOR THE WEATHER FOR THE NEXT DAYS
+
+
+INDEX
+  <!-- NEED TO SEE ABOUT WRAPPING THE CONTENT INSIDE THE CURRENT CITY, BECAUSE IF SOMEONE DECIDES TO WRITE DOWN A LONG SENTENCE IN THE SEARCH, IT ISN'T WRAPPING!!!!! -->
+
+  <!-- ADD THE LINK FOR THE "CONTACT ME" BUTTON  -->
+
+
+EXTRA CODE:
+  // let greeting = document.querySelector("#greeting");
+  // if (hours > 04) {
+  //   greeting.innerHTML = "Good morning!";
+  // } else if (hours > 11) {
+  //   greeting.innerHTML = "Good afternoon!";
+  // } else if (hours > 18) {
+  //   greeting.innerHTML = "Good evening!";
+  // } else {
+  //   greeting.innerHTML = "Hello! 🖐";
+  // }
+  // console.log(greeting)
+
+_____
+
+// function changeTip() {
+//   let helpingTip = document.querySelector("#tip");
+//   if (document.querySelector("#current-weather") === "Rain") {
+//     helpingTip.innerHTML = "Don't forget your umbrella ☂";
+//   } else if (document.querySelector("#current-weather") === "Clear") {
+//     helpingTip.innerHTML = "Don't forget to put sunscreen on your face 🌞";
+//   } else {
+//     helpingTip.innerHTML = "Have a great day! 😀";
+//   }
+//   console.log(helpingTip);
+// }
+
+______
+
+// 🙀Bonus Feature from week 4 - CONVERT Cº DO Fº
+
+// function convertToCelcius(event) {
+//   let celciusTemperature = document.querySelector("#current-temp-value");
+//   celciusTemperature.innerHTML = "22";
+// }
+
+// function convertToFahrenheit(event) {
+//   let fahrenheitTemperature = document.querySelector("#current-temp-value");
+//   fahrenheitTemperature.innerHTML = "65";
+// }
+
+// let celciusLink = document.querySelector("#celcius-link");
+// celciusLink.addEventListener("click", convertToCelcius);
+// let fahrenheitLink = document.querySelector("#fahrenheit-link");
+// fahrenheitLink.addEventListener("click", convertToFahrenheit);
