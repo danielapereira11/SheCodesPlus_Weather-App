@@ -49,24 +49,17 @@
             </div>
           </div>
           <!-- Col 1 ROW 3 -->
-          <div class="row weather-row">
-            <div class="col-5">
+          <div class="row">
+            <div class="col-5 align-self-center">
               <div class="today-current-date-time">
                 <p>
-                  <span id="current-date"></span><br /><span
-                    id="current-time"
-                    ></span
-                  >
-                </p>
-              </div>
-              <div class="today-current-weather">
-                <p>
-                  <span id="current-weather"></span
-                  ><span><img src="" alt="" id="weather-icon" /></span>
+                  <span id="current-date"></span><br /><small
+                    >Last updated at </small
+                  ><span id="current-time"></span>
                 </p>
               </div>
             </div>
-            <div class="col today">
+            <div class="col today align-self-start">
               <span id="today-current-temp">
                 <span id="current-temp-value"></span>
                 <a
@@ -95,6 +88,18 @@
                 <i class="fas fa-long-arrow-alt-down"></i>
                 <span id="min-temp"></span>
               </p>
+            </div>
+          </div>
+          <!-- Col 1 ROW 4 -->
+          <div class="row justify-content-start today-current-weather">
+            <div class="col-6 weather-description align-self-center">
+              <p>
+                <span id="weather-description"></span
+                ><span><img src="" alt="" id="weather-icon" /></span>
+              </p>
+            </div>
+            <div class="col align-self-center">
+              <p>Wind Speed: <span id="wind-speed"></span> km/h</p>
             </div>
           </div>
         </div>

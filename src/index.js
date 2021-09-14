@@ -56,13 +56,17 @@ function showWeather(response) {
   minTemp = Math.round(response.data.main.temp_min);
   minTempValue.innerHTML = `${minTemp}ºC`;
   let currentWeather = response.data.weather[0].description;
-  let currentWeatherDescript = document.querySelector("#current-weather");
+  let currentWeatherDescript = document.querySelector("#weather-description");
   currentWeatherDescript.innerHTML = currentWeather;
   let weatherIconCode = response.data.weather[0].icon;
   let weatherIconUrl = `http://openweathermap.org/img/wn/${weatherIconCode}.png`;
   let weatherIcon = document.querySelector("#weather-icon");
   weatherIcon.src = weatherIconUrl;
   weatherIcon.alt = currentWeather;
+  let windSpeedValue = response.data.wind.speed;
+  let windSpeed = document.querySelector("#wind-speed");
+  windSpeed.innerHTML = windSpeedValue;
+  console.log(response);
 }
 
 // WEATHER API: SEARCHED CITY (TEMP + LOCATION)
@@ -92,7 +96,6 @@ function showCurrentLocation(position) {
 function getCurrentLocation() {
   navigator.geolocation.getCurrentPosition(showCurrentLocation);
 }
-
 
 function convertToCelcius(event) {
   event.preventDefault();
