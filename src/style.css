@@ -49,8 +49,14 @@ footer,
 .today-current-weather {
   font-size: 21px;
 }
+.weather-description {
+  font-weight: 500;
+}
 .weather-description ::first-letter {
   text-transform: capitalize;
+}
+.wind-speed {
+  font-size: 16px;
 }
 #today-current-temp {
   font-size: 65px;
@@ -146,8 +152,5 @@ p.card-text {
   }
   .today-current-weather {
     font-size: 18px;
-  }
-  .today-min-max-temp {
-    font-size: 17px;
   }
 }
