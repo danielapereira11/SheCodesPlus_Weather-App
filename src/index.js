@@ -66,7 +66,6 @@ function showWeather(response) {
   let windSpeedValue = response.data.wind.speed;
   let windSpeed = document.querySelector("#wind-speed");
   windSpeed.innerHTML = windSpeedValue;
-  console.log(response);
 }
 
 // WEATHER API: SEARCHED CITY (TEMP + LOCATION)

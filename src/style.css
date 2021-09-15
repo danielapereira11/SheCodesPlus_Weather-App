@@ -58,6 +58,9 @@ footer,
 .wind-speed {
   font-size: 16px;
 }
+.today {
+  padding-right: 0;
+}
 #today-current-temp {
   font-size: 65px;
 }

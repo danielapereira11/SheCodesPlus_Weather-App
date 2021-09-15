@@ -59,7 +59,7 @@
                 </p>
               </div>
             </div>
-            <div class="col today align-self-start">
+            <div class="col today">
               <span id="today-current-temp">
                 <span id="current-temp-value"></span>
                 <a
@@ -69,7 +69,7 @@
                   title="See the temperature in Celcius"
                   ><span class="temp-unit align-text-top">ºC</span></a
                 >
-                <span class="temp-unit align-text-top">&nbsp;|</span>
+                <span class="temp-unit align-text-top">|</span>
                 <a
                   href="#"
                   id="fahrenheit-link"
@@ -79,7 +79,7 @@
                 >
               </span>
             </div>
-            <div class="col today today-min-max-temp">
+            <div class="col today-min-max-temp">
               <p class="today-max-temp">
                 <i class="fas fa-long-arrow-alt-up"></i>
                 <span id="max-temp"></span>
@@ -158,7 +158,12 @@
           autocomplete="off"
           ;
         />
-        <button type="submit" class="btn search-button" id="search-button" title="Search">
+        <button
+          type="submit"
+          class="btn search-button"
+          id="search-button"
+          title="Search"
+        >
           <i class="fas fa-search"></i>
         </button>
       </form>
