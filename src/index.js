@@ -46,38 +46,47 @@ getCurrentTime();
 
 // WEATHER FORECAST
 
-function displayForecast(response, index) {
+function formatFollowingDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let weekDays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
+  return weekDays[day];
+}
+
+function displayForecast(response) {
   console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
-  let followingDays = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let forecast = response.data.daily;
+
   let forecastHtml = "";
-  followingDays.forEach(function (day) {
-    forecastHtml += `
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHtml += `
         <div class="col">
           <div class="card">
             <div class="card-body">
-              <p class="card-title">${day}</p>
-              <p class="card-text"><i class="fas fa-cloud"></i></p>
-              <p class="card-text">20ºC</p>
-              <p class="card-text">12ºC</p>
+              <p class="card-title">${formatFollowingDay(forecastDay.dt)}</p>
+              <p class="card-text"><img src="http://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }.png"></p>
+              <p class="card-text">${Math.round(forecastDay.temp.max)} ºC</p>
+              <p class="card-text">${Math.round(forecastDay.temp.min)} ºC</p>
             </div>
           </div>
         </div>`;
+    }
   });
+
   forecastElement.innerHTML = forecastHtml;
 }
 
+// <i class="fas fa-cloud"></i>
+
 function getForecast(coordinates) {
   let apiKey = "7df6c65e200126c6e7cd1b9752957b4c";
-  let forecastApi = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metri&appid=${apiKey}`;
+  let forecastApi = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=${apiKey}`;
   axios.get(forecastApi).then(displayForecast);
 }
 
