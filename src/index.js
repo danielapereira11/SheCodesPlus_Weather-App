@@ -44,6 +44,36 @@ function getCurrentTime() {
 }
 getCurrentTime();
 
+// WEATHER FORECAST
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let followingDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let forecastHtml = "";
+  followingDays.forEach(function (day) {
+    forecastHtml += `
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-title">${day}</p>
+              <p class="card-text"><i class="fas fa-cloud"></i></p>
+              <p class="card-text">20ºC</p>
+              <p class="card-text">12ºC</p>
+            </div>
+          </div>
+        </div>`;
+  });
+  forecastElement.innerHTML = forecastHtml;
+}
+
 // WEATHER
 
 function showWeather(response) {
@@ -66,6 +96,7 @@ function showWeather(response) {
   let windSpeedValue = response.data.wind.speed;
   let windSpeed = document.querySelector("#wind-speed");
   windSpeed.innerHTML = windSpeedValue;
+  displayForecast();
 }
 
 // WEATHER API: SEARCHED CITY (TEMP + LOCATION)
@@ -95,6 +126,8 @@ function showCurrentLocation(position) {
 function getCurrentLocation() {
   navigator.geolocation.getCurrentPosition(showCurrentLocation);
 }
+
+// UNIT CONVERSION
 
 function convertToCelcius(event) {
   event.preventDefault();
