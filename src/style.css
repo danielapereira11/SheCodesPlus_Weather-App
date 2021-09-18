@@ -109,13 +109,16 @@ footer,
   color: #055052;
 }
 .next-temp {
-  margin: 5px 20px 10px 20px;
+  margin: 5px 5px 10px 5px;
 }
 p.card-title {
   font-size: 15px;
 }
 p.card-text {
   line-height: 13px;
+}
+.forecast-day {
+  padding: 4px;
 }
 .contact-button {
   display: block;

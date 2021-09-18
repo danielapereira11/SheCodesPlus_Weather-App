@@ -49,7 +49,15 @@ getCurrentTime();
 function formatFollowingDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let weekDays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  let weekDays = [
+    "SUNDAY",
+    "MONDAY",
+    "TUESDAY",
+    "WEDNESDAY",
+    "THURSDAY",
+    "FRIDAY",
+    "SATURDAY",
+  ];
 
   return weekDays[day];
 }
@@ -63,7 +71,7 @@ function displayForecast(response) {
   forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
       forecastHtml += `
-        <div class="col">
+        <div class="col forecast-day">
           <div class="card">
             <div class="card-body">
               <p class="card-title">${formatFollowingDay(forecastDay.dt)}</p>
