@@ -55,7 +55,6 @@ function formatFollowingDay(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.daily;
 
@@ -81,8 +80,6 @@ function displayForecast(response) {
 
   forecastElement.innerHTML = forecastHtml;
 }
-
-// <i class="fas fa-cloud"></i>
 
 function getForecast(coordinates) {
   let apiKey = "7df6c65e200126c6e7cd1b9752957b4c";
