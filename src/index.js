@@ -46,7 +46,8 @@ getCurrentTime();
 
 // WEATHER FORECAST
 
-function displayForecast() {
+function displayForecast(response, index) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let followingDays = [
     "Sunday",
@@ -74,6 +75,12 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHtml;
 }
 
+function getForecast(coordinates) {
+  let apiKey = "7df6c65e200126c6e7cd1b9752957b4c";
+  let forecastApi = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metri&appid=${apiKey}`;
+  axios.get(forecastApi).then(displayForecast);
+}
+
 // WEATHER
 
 function showWeather(response) {
@@ -96,7 +103,7 @@ function showWeather(response) {
   let windSpeedValue = response.data.wind.speed;
   let windSpeed = document.querySelector("#wind-speed");
   windSpeed.innerHTML = windSpeedValue;
-  displayForecast();
+  getForecast(response.data.coord);
 }
 
 // WEATHER API: SEARCHED CITY (TEMP + LOCATION)
