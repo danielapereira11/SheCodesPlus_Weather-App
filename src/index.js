@@ -135,6 +135,45 @@ function showWeather(response) {
   let windSpeed = document.querySelector("#wind-speed");
   windSpeed.innerHTML = windSpeedValue;
   getForecast(response.data.coord);
+
+  let tip = document.querySelector("#tip");
+  let description = [
+    "clear sky",
+    "few clouds",
+    "scattered clouds",
+    "broken clouds",
+    "shower rain",
+    "rain",
+    "thunderstorm",
+    "snow",
+    "mist",
+    "haze",
+  ];
+  if (currentWeather === description[0]) {
+    tip.innerHTML = "Don't squint, put some sunglasses on! 😎";
+  } else if (
+    currentWeather === description[1] ||
+    currentWeather === description[2] ||
+    currentWeather === description[3]
+  ) {
+    tip.innerHTML = "It's a good day for an outdoor activity 🤸‍♀️";
+  } else if (
+    currentWeather === description[4] ||
+    currentWeather === description[5]
+  ) {
+    tip.innerHTML = "Don't forget your umbrella ☂";
+  } else if (currentWeather === description[6]) {
+    tip.innerHTML = "Be careful with your electrical appliances ⚡";
+  } else if (currentWeather === description[7]) {
+    tip.innerHTML = "Is there enough for a snowman? ⛄";
+  } else if (
+    currentWeather === description[8] ||
+    currentWeather === description[9]
+  ) {
+    tip.innerHTML = "Be careful out there, you can't see clearly 😟";
+  } else {
+    tip.innerHTML = "Have a great day 🤗";
+  }
 }
 
 // WEATHER API: SEARCHED CITY (TEMP + LOCATION)
