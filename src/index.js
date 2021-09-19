@@ -28,6 +28,21 @@ function getCurrentDate() {
 }
 getCurrentDate();
 
+// GREETING
+
+function greeting() {
+  let greeting = document.querySelector("#greeting");
+
+  let hours = currentDateTime.getHours();
+  if (hours < 12) {
+    greeting.innerHTML = "Good morning!";
+  } else if (hours < 20) {
+    greeting.innerHTML = "Good afternoon!";
+  } else {
+    greeting.innerHTML = "Good evening!";
+  }
+}
+
 // TIME
 
 function getCurrentTime() {
@@ -41,12 +56,14 @@ function getCurrentTime() {
     minutes = `0${minutes}`;
   }
   currentTime.innerHTML = `${hours}:${minutes}`;
+
+  greeting();
 }
 getCurrentTime();
 
 // WEATHER FORECAST
 
-function formatFollowingDay(timestamp) {
+function formatWeekDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
   let weekDays = [
@@ -74,7 +91,7 @@ function displayForecast(response) {
         <div class="col forecast-day">
           <div class="card">
             <div class="card-body">
-              <p class="card-title">${formatFollowingDay(forecastDay.dt)}</p>
+              <p class="card-title">${formatWeekDay(forecastDay.dt)}</p>
               <p class="card-text"><img src="http://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
               }.png"></p>
