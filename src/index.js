@@ -97,12 +97,12 @@ function displayForecast(response) {
               <p class="card-text"><img src="http://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
               }.png"></p>
-              <p class="card-text" id="forecast-max">${forecastMax} <small class="small">ºC</small> &nbsp|&nbsp ${Math.round(
+              <p class="card-text" id="forecast-max">${forecastMax} <small>ºC &nbsp|&nbsp</small><small class="light">${Math.round(
         forecastMax * 1.8 + 32
-      )} <small class="small light">ºF</small> </p>
-              <p class="card-text" id="forecast-min">${forecastMin} <small class="small">ºC</small> &nbsp|&nbsp ${Math.round(
+      )} ºF</small> </p>
+              <p class="card-text" id="forecast-min">${forecastMin} <small>ºC &nbsp|&nbsp</small><small class="light">${Math.round(
         forecastMin * 1.8 + 32
-      )} <small class="small light">ºF</small></p>
+      )} ºF</small></p>
             </div>
           </div>
         </div>`;
