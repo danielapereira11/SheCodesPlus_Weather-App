@@ -146,7 +146,11 @@ function showWeather(response) {
     currentWeather === "overcast clouds"
   ) {
     tip.innerHTML = "It's a good day for an outdoor activity 🤸‍♀️";
-  } else if (currentWeather === "shower rain" || currentWeather === "rain") {
+  } else if (
+    currentWeather === "shower rain" ||
+    currentWeather === "light rain" ||
+    currentWeather === "rain"
+  ) {
     tip.innerHTML = "Don't forget your umbrella ☂";
   } else if (currentWeather === "thunderstorm") {
     tip.innerHTML = "Be careful with your electrical appliances ⚡";
