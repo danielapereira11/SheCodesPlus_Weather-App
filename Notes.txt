@@ -5,36 +5,3 @@ JAVASCRIPT
 
 // SEE ABOUT HAVING THE CITY THAT WAS SEARCHED DISAPEAR FROM THE SEARCH BAR (???)
 
-
-INDEX
-  <!-- ADD THE LINK FOR THE "CONTACT ME" BUTTON  -->
-
-
-EXTRA CODE:
-  // let greeting = document.querySelector("#greeting");
-  // if (hours > 04) {
-  //   greeting.innerHTML = "Good morning!";
-  // } else if (hours > 11) {
-  //   greeting.innerHTML = "Good afternoon!";
-  // } else if (hours > 18) {
-  //   greeting.innerHTML = "Good evening!";
-  // } else {
-  //   greeting.innerHTML = "Hello! 🖐";
-  // }
-  // console.log(greeting)
-
-_____
-
-// function changeTip() {
-//   let helpingTip = document.querySelector("#tip");
-//   if (document.querySelector("#current-weather") === "Rain") {
-//     helpingTip.innerHTML = "Don't forget your umbrella ☂";
-//   } else if (document.querySelector("#current-weather") === "Clear") {
-//     helpingTip.innerHTML = "Don't forget to put sunscreen on your face 🌞";
-//   } else {
-//     helpingTip.innerHTML = "Have a great day! 😀";
-//   }
-//   console.log(helpingTip);
-// }
-
-______

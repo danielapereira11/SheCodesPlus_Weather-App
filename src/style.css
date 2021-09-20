@@ -129,6 +129,13 @@ p.card-text {
   background-color: #055052;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
+#contact-link,
+#contact-link:visited,
+#contact-link:focus,
+#contact-link:active {
+  text-decoration: none;
+  color: #ffeedbe8;
+}
 @media (min-width: 991.98px) {
   .container {
     max-width: 800px;
