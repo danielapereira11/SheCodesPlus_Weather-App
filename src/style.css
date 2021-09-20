@@ -111,6 +111,12 @@ footer,
 .next-temp {
   margin: 5px 5px 10px 5px;
 }
+small.small {
+  font-size: 13px;
+}
+.light {
+  color: #012d307a;
+}
 p.card-title {
   font-size: 15px;
 }

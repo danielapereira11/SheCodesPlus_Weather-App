@@ -82,10 +82,12 @@ function formatWeekDay(timestamp) {
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.daily;
-
   let forecastHtml = "";
 
   forecast.forEach(function (forecastDay, index) {
+    let forecastMax = Math.round(forecastDay.temp.max);
+    let forecastMin = Math.round(forecastDay.temp.min);
+
     if (index < 5) {
       forecastHtml += `
         <div class="col forecast-day">
@@ -95,8 +97,12 @@ function displayForecast(response) {
               <p class="card-text"><img src="http://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
               }.png"></p>
-              <p class="card-text">${Math.round(forecastDay.temp.max)} ºC</p>
-              <p class="card-text">${Math.round(forecastDay.temp.min)} ºC</p>
+              <p class="card-text" id="forecast-max">${forecastMax} <small class="small">ºC</small> &nbsp|&nbsp ${Math.round(
+        forecastMax * 1.8 + 32
+      )} <small class="small light">ºF</small> </p>
+              <p class="card-text" id="forecast-min">${forecastMin} <small class="small">ºC</small> &nbsp|&nbsp ${Math.round(
+        forecastMin * 1.8 + 32
+      )} <small class="small light">ºF</small></p>
             </div>
           </div>
         </div>`;
@@ -138,7 +144,7 @@ function showWeather(response) {
 
   let tip = document.querySelector("#tip");
   if (currentWeather === "clear sky") {
-    tip.innerHTML = "Don't squint, put some sunglasses on! 😎";
+    tip.innerHTML = "Don't squint out there, put some sunglasses on! 😎";
   } else if (
     currentWeather === "few clouds" ||
     currentWeather === "scattered clouds" ||
@@ -153,7 +159,7 @@ function showWeather(response) {
   ) {
     tip.innerHTML = "Don't forget your umbrella ☂";
   } else if (currentWeather === "thunderstorm") {
-    tip.innerHTML = "Be careful with your electrical appliances ⚡";
+    tip.innerHTML = "⚡ Watch out for your electrical appliances ⚡";
   } else if (currentWeather === "snow") {
     tip.innerHTML = "Is there enough for a snowman? ⛄";
   } else if (currentWeather === "mist" || currentWeather === "haze") {
