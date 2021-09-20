@@ -17,7 +17,9 @@ body {
 h1 {
   font-size: 17px;
   font-weight: 100;
-  line-height: 18px;
+  line-height: 20px;
+  padding: 5px;
+  margin: 0;
 }
 h2 {
   font-size: 30px;
@@ -37,11 +39,6 @@ footer,
   background-color: #055052;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 }
-#greeting-tip {
-  line-height: 25px;
-  padding: 5px;
-  margin: 2px;
-}
 .image-row {
   padding: 6px;
 }
@@ -51,11 +48,9 @@ footer,
 .today-current-date-time {
   font-size: 16px;
 }
-.today-current-weather {
-  font-size: 21px;
-}
 .weather-description {
   font-weight: 500;
+  font-size: 21px;
 }
 .weather-description ::first-letter {
   text-transform: capitalize;
