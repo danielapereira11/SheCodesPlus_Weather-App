@@ -145,6 +145,7 @@ function showWeather(response) {
   let tip = document.querySelector("#tip");
   if (currentWeather === "clear sky") {
     tip.innerHTML = "Don't squint out there, put some sunglasses on! 😎";
+    document.body.style.backgroundImage = "url('images/background_kite.svg')";
   } else if (
     currentWeather === "few clouds" ||
     currentWeather === "scattered clouds" ||
@@ -152,20 +153,25 @@ function showWeather(response) {
     currentWeather === "overcast clouds"
   ) {
     tip.innerHTML = "It's a good day for an outdoor activity 🤸‍♀️";
+    document.body.style.backgroundImage = "url('images/outdoor.svg')";
   } else if (
     currentWeather === "shower rain" ||
     currentWeather === "light rain" ||
     currentWeather === "rain"
   ) {
     tip.innerHTML = "Don't forget your umbrella ☂";
+    document.body.style.backgroundImage = "url('images/autumn.svg')";
   } else if (currentWeather === "thunderstorm") {
     tip.innerHTML = "⚡ Watch out for your electrical appliances ⚡";
+    document.body.style.backgroundImage = "url('images/moonlight.svg')";
   } else if (currentWeather === "snow") {
     tip.innerHTML = "Is there enough for a snowman? ⛄";
+    document.body.style.backgroundImage = "url('images/undraw_snow.svg')";
   } else if (currentWeather === "mist" || currentWeather === "haze") {
     tip.innerHTML = "Be careful out there, you can't see clearly 😟";
   } else {
     tip.innerHTML = "Have a great day 🤗";
+    document.body.style.backgroundImage = "url('images/background_kite.svg')";
   }
 }
 
