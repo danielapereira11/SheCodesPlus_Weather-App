@@ -1,5 +1,5 @@
 body {
-  background-image: url("/Images/background_kite.svg");
+  background-image: url(../images/background_kite.svg);
 }
 .container {
   margin: 20px auto;
