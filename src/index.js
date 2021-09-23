@@ -144,7 +144,7 @@ function showWeather(response) {
   let tip = document.querySelector("#tip");
   if (currentWeather === "clear sky") {
     tip.innerHTML = "Don't squint out there, put some sunglasses on! 😎";
-    document.body.style.backgroundImage = "url('images/backg__kite.svg')";
+    document.body.style.backgroundImage = "url('images/backg_nature.svg')";
   } else if (
     currentWeather === "few clouds" ||
     currentWeather === "scattered clouds" ||
@@ -152,7 +152,7 @@ function showWeather(response) {
     currentWeather === "overcast clouds"
   ) {
     tip.innerHTML = "It's a good day for an outdoor activity 🤸‍♀️";
-    document.body.style.backgroundImage = "url('images/backg__outdoor.svg')";
+    document.body.style.backgroundImage = "url('images/backg__kite.svg')";
   } else if (
     currentWeather === "shower rain" ||
     currentWeather === "light rain" ||
