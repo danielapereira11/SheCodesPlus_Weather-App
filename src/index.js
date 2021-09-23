@@ -1,8 +1,5 @@
-// Date & Time
-
 let currentDateTime = new Date();
 
-// DATE
 function getCurrentDate() {
   let currentDate = document.querySelector("#current-date");
   let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -27,8 +24,6 @@ function getCurrentDate() {
 }
 getCurrentDate();
 
-// GREETING
-
 function greeting() {
   let greeting = document.querySelector("#greeting");
 
@@ -41,8 +36,6 @@ function greeting() {
     greeting.innerHTML = "Good evening!";
   }
 }
-
-// TIME
 
 function getCurrentTime() {
   let currentTime = document.querySelector("#current-time");
@@ -59,8 +52,6 @@ function getCurrentTime() {
   greeting();
 }
 getCurrentTime();
-
-// WEATHER FORECAST
 
 function formatWeekDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -116,8 +107,6 @@ function getForecast(coordinates) {
   let forecastApi = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=${apiKey}`;
   axios.get(forecastApi).then(displayForecast);
 }
-
-// WEATHER
 
 function showWeather(response) {
   let currentCity = document.querySelector("#current-city");
@@ -176,8 +165,6 @@ function showWeather(response) {
   }
 }
 
-// WEATHER API: SEARCHED CITY (TEMP + LOCATION)
-
 function search(city) {
   let apiKey = "7df6c65e200126c6e7cd1b9752957b4c";
   let searchedLocationTempApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
@@ -190,8 +177,6 @@ function searchAnotherCity(event) {
   search(city);
 }
 
-// WEATHER API: CURRENT LOCATION (TEMP + LOCATION)
-
 function showCurrentLocation(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -203,8 +188,6 @@ function showCurrentLocation(position) {
 function getCurrentLocation() {
   navigator.geolocation.getCurrentPosition(showCurrentLocation);
 }
-
-// UNIT CONVERSION
 
 function convertToCelcius(event) {
   event.preventDefault();
