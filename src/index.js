@@ -1,7 +1,6 @@
 // Date & Time
 
 let currentDateTime = new Date();
-// Sat Aug 21 2021 10:11:48 GMT+0100 (Western European Summer Time)
 
 // DATE
 function getCurrentDate() {
@@ -145,7 +144,7 @@ function showWeather(response) {
   let tip = document.querySelector("#tip");
   if (currentWeather === "clear sky") {
     tip.innerHTML = "Don't squint out there, put some sunglasses on! 😎";
-    document.body.style.backgroundImage = "url('images/background_kite.svg')";
+    document.body.style.backgroundImage = "url('images/backg__kite.svg')";
   } else if (
     currentWeather === "few clouds" ||
     currentWeather === "scattered clouds" ||
@@ -153,25 +152,27 @@ function showWeather(response) {
     currentWeather === "overcast clouds"
   ) {
     tip.innerHTML = "It's a good day for an outdoor activity 🤸‍♀️";
-    document.body.style.backgroundImage = "url('images/outdoor.svg')";
+    document.body.style.backgroundImage = "url('images/backg__outdoor.svg')";
   } else if (
     currentWeather === "shower rain" ||
     currentWeather === "light rain" ||
     currentWeather === "rain"
   ) {
     tip.innerHTML = "Don't forget your umbrella ☂";
-    document.body.style.backgroundImage = "url('images/autumn.svg')";
+    document.body.style.backgroundImage = "url('images/backg_autumn.svg')";
   } else if (currentWeather === "thunderstorm") {
     tip.innerHTML = "⚡ Watch out for your electrical appliances ⚡";
-    document.body.style.backgroundImage = "url('images/moonlight.svg')";
+    document.body.style.backgroundImage = "url('images/backg__moonlight.svg')";
   } else if (currentWeather === "snow") {
     tip.innerHTML = "Is there enough for a snowman? ⛄";
-    document.body.style.backgroundImage = "url('images/undraw_snow.svg')";
+    document.body.style.backgroundImage = "url('images/backg__snow.svg')";
   } else if (currentWeather === "mist" || currentWeather === "haze") {
     tip.innerHTML = "Be careful out there, you can't see clearly 😟";
+    document.body.style.backgroundImage = "url('images/backg__dreamer.svg')";
   } else {
     tip.innerHTML = "Have a great day 🤗";
-    document.body.style.backgroundImage = "url('images/background_kite.svg')";
+    document.body.style.backgroundImage =
+      "url('images/backg__playful_cat.svg')";
   }
 }
 
