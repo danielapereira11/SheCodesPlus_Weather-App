@@ -163,7 +163,7 @@ function showWeather(response) {
   } else if (currentWeather === "thunderstorm") {
     tip.innerHTML = "⚡ Watch out for your electrical appliances ⚡";
     document.body.style.backgroundImage = "url('images/backg__moonlight.svg')";
-  } else if (currentWeather === "snow") {
+  } else if (currentWeather === "snow" || currentWeather === "light snow") {
     tip.innerHTML = "Is there enough for a snowman? ⛄";
     document.body.style.backgroundImage = "url('images/backg__snow.svg')";
   } else if (currentWeather === "mist" || currentWeather === "haze") {
